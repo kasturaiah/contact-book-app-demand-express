@@ -19,7 +19,7 @@ function App() {
   const fetchContacts = async () => {
     setIsLoading(true);
     try {
-      const BACKEND_URL = 'https://dashboard.render.com/web/srv-d38m8h7diees73cmlr0g/deploys/dep-d38m8hndiees73cmlra0';
+      const BACKEND_URL = 'https://contact-book-app-demand-express.onrender.com';
       const res = await axios.get(`${BACKEND_URL}/contacts?page=${page}&limit=${limit}`);
       setContacts(res.data.contacts);
       setTotalPages(res.data.totalPages);
