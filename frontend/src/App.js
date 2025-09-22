@@ -19,7 +19,8 @@ function App() {
   const fetchContacts = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.get(`/contacts?page=${page}&limit=${limit}`);
+      const BACKEND_URL = 'https://dashboard.render.com/web/srv-d38m8h7diees73cmlr0g/deploys/dep-d38m8hndiees73cmlra0';
+      const res = await axios.get(`${BACKEND_URL}/contacts?page=${page}&limit=${limit}`);
       setContacts(res.data.contacts);
       setTotalPages(res.data.totalPages);
     } catch (error) {
